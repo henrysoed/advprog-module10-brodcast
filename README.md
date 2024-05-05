@@ -12,3 +12,9 @@ Contoh interaksi yang terjadi adalah sebagai berikut: jika pengguna mengetikkan 
 
 Dengan demikian, program ini memfasilitasi komunikasi antara client yang terhubung melalui server sebagai perantara. Pesan-pesan yang dikirim dari satu client akan diterima oleh semua client lainnya, memungkinkan interaksi dan pertukaran informasi antara pengguna yang menggunakan aplikasi ini.
 
+## 2.2. Modifying the websocket port
+
+![alt text](image-1.png)
+
+Untuk menjalankan program, clone repositori dan jalankan server dengan cargo run --bin server. By default, server akan mendengarkan koneksi WebSocket pada port 2000. Jika ingin mengubah port server menjadi 8080, Anda dapat memodifikasi konfigurasi port dalam kode server sebelum melakukan kompilasi dan menjalankan ulang server. Selanjutnya, jalankan beberapa client dengan cargo run --bin client di terminal terpisah untuk menghubungkan ke server. Setelah semua client terhubung, Anda dapat berinteraksi dengan program chat dengan mengetik dan mengirim pesan di terminal client. Pesan yang dikirim akan diterima oleh semua client yang terhubung. Program ini memanfaatkan tokio_websockets untuk mengimplementasikan koneksi WebSocket secara asinkron di atas runtime Tokio. Jika tertarik berkontribusi, fork repositori ini dan ajukan perbaikan atau peningkatan melalui pull request.
+
